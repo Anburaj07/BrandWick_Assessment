@@ -4,6 +4,17 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import dukkan from "../images/dukaan.png";
+import Home from "../images/logos/Home.png";
+import Orders from "../images/logos/Orders.png";
+import Delivery from "../images/logos/Delivery.png";
+import Products from "../images/logos/Products.png";
+import Marketing from "../images/logos/Marketing.png";
+import Payments from "../images/logos/Payments.png";
+import Tools from "../images/logos/Tools.png";
+import Discounts from "../images/logos/Discounts.png";
+import Customers from "../images/logos/Customers.png";
+import Apperance from "../images/logos/Apperance.png";
+import Plugins from "../images/logos/Plugins.png";
 
 const Sidebar = () => {
   return (
@@ -15,39 +26,95 @@ const Sidebar = () => {
         </Box>
       </Box>
       <Box id="links">
-        <Link>
-          <Text>Home</Text>
-        </Link>
-        <Link>
-          <Text>Orders</Text>
-        </Link>
-        <Link>
-          <Text>Delivery</Text>
-        </Link>
-        <Link>
-          <Text>Products</Text>
-        </Link>
-        <Link>
-          <Text>Marketing</Text>
-        </Link>
-        <Link>
-          <Text>Payments</Text>
-        </Link>
-        <Link>
-          <Text>Tools</Text>
-        </Link>
-        <Link>
-          <Text>Discounts</Text>
-        </Link>
-        <Link>
-          <Text>Customers</Text>
-        </Link>
-        <Link>
-          <Text>Appearance</Text>
-        </Link>
-        <Link>
-          <Text>Plugins</Text>
-        </Link>
+        <Box>
+          <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Home} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Home</Text>
+          </Link>
+        </Box>
+
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Orders} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Orders</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Delivery} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Delivery</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Products} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Products</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Marketing} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Marketing</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Payments} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Payments</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Tools} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Tools</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Discounts} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Discounts</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Customers} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Customers</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Apperance} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Appearance</Text>
+          </Link>
+        </Box>
+        <Box>
+        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
+            <Image src={Plugins} w={"100%"} />
+          </Box>
+          <Link>
+            <Text>Plugins</Text>
+          </Link>
+        </Box>
       </Box>
       <Box id="credits">
         <Text>Available Credits</Text>
@@ -72,8 +139,10 @@ const DIV = styled.div`
     margin-bottom: 25px;
   }
   #links {
-    /* border: 1px solid yellow; */
     padding-left: 4%;
+    div {
+      display: flex;
+    }
   }
   a {
     padding: 10px;
@@ -81,7 +150,7 @@ const DIV = styled.div`
   #credits {
     width: 90%;
     margin: auto;
-    height: 70px;
+    height: 50px;
     text-align: center;
     margin-top: 50px;
     background-color: #ffffff1a;
