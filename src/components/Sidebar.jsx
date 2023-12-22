@@ -3,121 +3,136 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/logo.png";
-import dukkan from "../images/dukaan.png";
+import Down from "../images/Down.png";
 import Home from "../images/logos/Home.png";
 import Orders from "../images/logos/Orders.png";
 import Delivery from "../images/logos/Delivery.png";
 import Products from "../images/logos/Products.png";
 import Marketing from "../images/logos/Marketing.png";
 import Payments from "../images/logos/Payments.png";
-import Tools from "../images/logos/Tools.png";
+import Analytics from "../images/logos/Analytics.png";
 import Discounts from "../images/logos/Discounts.png";
 import Customers from "../images/logos/Customers.png";
 import Apperance from "../images/logos/Apperance.png";
 import Plugins from "../images/logos/Plugins.png";
+import wallet from "../images/logos/wallet.png";
 
 const Sidebar = () => {
   return (
     <DIV>
-      <Box id="logo" display={"flex"}>
-        <Image src={logo} ml={"10px"} />
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-          <Image w={"100%"} src={dukkan} />
+      <Box
+        id="logo"
+        display={"flex"}
+        w={"85.74%"}
+        alignItems={"center"}
+        margin={"auto"}
+      >
+        <Box>
+          <Image
+            borderRadius={"4px"}
+            src={logo}
+            backgroundRepeat={"no-repeat"}
+          />
+        </Box>
+        <Box>
+          <Text
+            fontWeight={"500"}
+            fontSize={"15px"}
+            w={"108px"}
+            lineHeight={"22px"}
+          >
+            Nishyan
+          </Text>
+          <Text
+            fontWeight={"400"}
+            fontSize={"13px"}
+            lineHeight={"16px"}
+            color={"#aca7a7"}
+            textDecorationLine={"underline"}
+          >
+            Visit store
+          </Text>
+        </Box>
+        <Box>
+          <Image src={Down} />
         </Box>
       </Box>
       <Box id="links">
         <Box>
-          <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Home} w={"100%"} />
-          </Box>
+          <Image src={Home} w={"12%"} />
           <Link>
             <Text>Home</Text>
           </Link>
         </Box>
-
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Orders} w={"100%"} />
-          </Box>
+          <Image src={Orders} w={"12%"} />
           <Link>
             <Text>Orders</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Delivery} w={"100%"} />
-          </Box>
-          <Link>
-            <Text>Delivery</Text>
-          </Link>
-        </Box>
-        <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Products} w={"100%"} />
-          </Box>
+          <Image src={Products} w={"12%"} />
           <Link>
             <Text>Products</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Marketing} w={"100%"} />
-          </Box>
+          <Image src={Delivery} w={"12%"} />
+          <Link>
+            <Text>Delivery</Text>
+          </Link>
+        </Box>
+        <Box>
+          <Image src={Marketing} w={"12%"} />
           <Link>
             <Text>Marketing</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Payments} w={"100%"} />
-          </Box>
+          <Image src={Analytics} w={"12%"} />
           <Link>
-            <Text>Payments</Text>
+            <Text>Analytis</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Tools} w={"100%"} />
-          </Box>
+          <Image src={Payments} w={"12%"} />
           <Link>
-            <Text>Tools</Text>
+            <Text>Payouts</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Discounts} w={"100%"} />
-          </Box>
+          <Image src={Discounts} w={"12%"} />
           <Link>
             <Text>Discounts</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Customers} w={"100%"} />
-          </Box>
+          <Image src={Customers} w={"12%"} />
           <Link>
-            <Text>Customers</Text>
+            <Text>Audience</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Apperance} w={"100%"} />
-          </Box>
+          <Image src={Apperance} w={"12%"} />
           <Link>
             <Text>Appearance</Text>
           </Link>
         </Box>
         <Box>
-        <Box display={"flex"} alignItems={"center"} ml={"10px"}>
-            <Image src={Plugins} w={"100%"} />
-          </Box>
+          <Image src={Plugins} w={"12%"} />
           <Link>
             <Text>Plugins</Text>
           </Link>
         </Box>
       </Box>
       <Box id="credits">
-        <Text>Available Credits</Text>
+        <Box w={"16%"} backgroundColor={"#353c53"} p={"3px"}>
+            <Image src={wallet} />
+        </Box>
+        <Box>
+          <Text>Available Credits</Text>
+          <Text>222.10</Text>
+        </Box>
       </Box>
     </DIV>
   );
@@ -126,34 +141,49 @@ const Sidebar = () => {
 export default Sidebar;
 
 const DIV = styled.div`
-  width: 20%;
+  width: 15.55%;
   box-sizing: border-box;
-  padding-bottom: 2%;
   background-color: #1e2640;
   color: #ffffff;
   text-align: left;
+  font-family: Galano Grotesque;
+  padding: 16px 10px;
+  /* border: 1px solid red; */
 
   #logo {
-    padding: 4%;
-    /* border: 1px solid red; */
+    gap: var(--Spacing-spacing-05, 12px);
     margin-bottom: 25px;
   }
   #links {
     padding-left: 4%;
     div {
       display: flex;
+      padding: 8px 16px;
+      align-items: center;
+      gap: 12px;
+      width: 92%;
+      /* border: 1px solid red; */
+      p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        opacity: 0.8;
+      }
     }
   }
   a {
     padding: 10px;
   }
   #credits {
-    width: 90%;
-    margin: auto;
-    height: 50px;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #ffffff1a;
-    border-radius: 10px;
+    display: flex;
+    width: 192px;
+    padding: 6px 12px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 4px;
+    background: #353c53;
+    margin-top: 100px;
   }
 `;
