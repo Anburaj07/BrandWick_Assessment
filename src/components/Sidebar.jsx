@@ -155,10 +155,9 @@ const DIV = styled.div`
     margin-bottom: 25px;
   }
   #links {
-    padding-left: 4%;
     div {
       display: flex;
-      padding: 8px 16px;
+      padding: 6px 16px 6px 16px;
       align-items: center;
       gap: 12px;
       width: 92%;
