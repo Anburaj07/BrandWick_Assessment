@@ -56,7 +56,7 @@ const DIV = styled.div`
     align-items: center;
     gap: 16px;
     font-family: Galano Grotesque;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
 
     div {
