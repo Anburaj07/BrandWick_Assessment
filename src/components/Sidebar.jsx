@@ -27,20 +27,11 @@ const Sidebar = () => {
         alignItems={"center"}
         margin={"auto"}
       >
-        <Box>
-          <Image
-            borderRadius={"4px"}
-            src={logo}
-            backgroundRepeat={"no-repeat"}
-          />
+        <Box borderRadius={"4px"}>
+          <Image src={logo} bgRepeat={"no-repeat"} />
         </Box>
         <Box>
-          <Text
-            fontWeight={"500"}
-            fontSize={"15px"}
-            w={"108px"}
-            lineHeight={"22px"}
-          >
+          <Text fontWeight={"500"} fontSize={"15px"} lineHeight={"22px"}>
             Nishyan
           </Text>
           <Text
@@ -127,7 +118,7 @@ const Sidebar = () => {
       </Box>
       <Box id="credits">
         <Box w={"16%"} backgroundColor={"#353c53"} p={"3px"}>
-            <Image src={wallet} />
+          <Image src={wallet} />
         </Box>
         <Box>
           <Text>Available Credits</Text>
@@ -141,13 +132,17 @@ const Sidebar = () => {
 export default Sidebar;
 
 const DIV = styled.div`
-  width: 15.55%;
+  width: 16.55%;
   box-sizing: border-box;
   background-color: #1e2640;
   color: #ffffff;
   text-align: left;
   font-family: Galano Grotesque;
   padding: 16px 10px;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
   /* border: 1px solid red; */
 
   #logo {
@@ -163,7 +158,7 @@ const DIV = styled.div`
       width: 92%;
       /* border: 1px solid red; */
       p {
-        font-size: 14px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 500;
         line-height: 20px;
@@ -176,7 +171,6 @@ const DIV = styled.div`
   }
   #credits {
     display: flex;
-    width: 192px;
     padding: 6px 12px;
     align-items: center;
     justify-content: space-around;

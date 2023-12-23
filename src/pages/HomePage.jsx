@@ -41,7 +41,7 @@ const HomePage = () => {
       </Box>
       <Box id="dashboard">
         <Overview />
-        <Table/>
+        <Table />
       </Box>
     </DIV>
   );
@@ -60,7 +60,7 @@ const DIV = styled.div`
     font-family: Galano Grotesque;
     /* border: 1px solid red; */
     width: 100%;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 
     div {
       gap: 16px;
@@ -77,6 +77,6 @@ const DIV = styled.div`
   #dashboard {
     /* border: 4px solid rosybrown; */
     padding: 32px;
-    background: var(--Black-98, #FAFAFA);
+    background: var(--Black-98, #fafafa);
   }
 `;

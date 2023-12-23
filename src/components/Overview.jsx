@@ -71,7 +71,7 @@ const Overview = () => {
           </Flex>
         </Box>
         <Box id="amount">
-        <Flex alignItems={"center"}>
+          <Flex alignItems={"center"}>
             <Text
               mr={"10px"}
               color={"#4D4D4D"}

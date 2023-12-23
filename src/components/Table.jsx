@@ -16,18 +16,28 @@ import Payouts from "./Payouts";
 import Refunds from "./Refunds";
 
 const Table = () => {
-    const[state,setState]=useState("payouts")
+  const [state, setState] = useState("payouts");
   return (
     <DIV>
       <Flex flexDirection={"column"} gap={"20px"} pb={"20px"}>
         <Heading textAlign={"start"}>Transactions | This Month</Heading>
         <Flex>
-          <Button  background={state=="payouts"?"#146eb4":"#E6E6E6"}  color={state=="payouts"?"#FFF":"#808080"} value={state} onClick={()=>{
-            setState("payouts")
-          }}>
+          <Button
+            background={state == "payouts" ? "#146eb4" : "#E6E6E6"}
+            color={state == "payouts" ? "#FFF" : "#808080"}
+            value={state}
+            onClick={() => {
+              setState("payouts");
+            }}
+          >
             Payouts (22)
           </Button>
-          <Button background={state=="refunds"?"#146eb4":"#E6E6E6"}  color={state=="refunds"?"#FFF":"#808080"}  value={state}onClick={()=>setState("refunds")}>
+          <Button
+            background={state == "refunds" ? "#146eb4" : "#E6E6E6"}
+            color={state == "refunds" ? "#FFF" : "#808080"}
+            value={state}
+            onClick={() => setState("refunds")}
+          >
             Refunds (2)
           </Button>
         </Flex>
@@ -49,21 +59,25 @@ const Table = () => {
             </Box>
             <Input border={"none"} />
           </Flex>
-          <Flex
-            alignItems={"center"} gap={"16px"}
-          >
-            <Flex alignItems={"center"} p={"4px"} id="sort" border={"1px solid #D9D9D9"} borderRadius={"4px"}>
+          <Flex alignItems={"center"} gap={"16px"}>
+            <Flex
+              alignItems={"center"}
+              p={"4px"}
+              id="sort"
+              border={"1px solid #D9D9D9"}
+              borderRadius={"4px"}
+            >
               <Text pr={"2px"}>Sort</Text>
               <Box>
                 <Image src={Sort} />
               </Box>
             </Flex>
             <Box border={"1px solid #D9D9D9"} borderRadius={"4px"}>
-                <Image p={"4px"} src={download}/>
+              <Image p={"4px"} src={download} />
             </Box>
           </Flex>
         </Flex>
-        {state=="payouts"?<Payouts/>:<Refunds/>}
+        {state == "payouts" ? <Payouts /> : <Refunds />}
       </Flex>
     </DIV>
   );
@@ -106,8 +120,8 @@ const DIV = styled.div`
       font-weight: 400;
       line-height: 24px; /* 150% */
     }
-    button:hover{
-        color: #141515;
+    button:hover {
+      color: #141515;
     }
   }
 `;
