@@ -5,12 +5,10 @@ import {
   Tbody,
   Td,
   Text,
-  Th,
   Thead,
   Tr,
 } from "@chakra-ui/react";
 import React from "react";
-import Triangle from "../images/table/Triangle.png";
 import dot1 from "../images/table/dot1.png";
 import dot2 from "../images/table/dot2.png";
 import styled from "styled-components";
