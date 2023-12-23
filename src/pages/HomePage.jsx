@@ -51,7 +51,7 @@ export default HomePage;
 
 const DIV = styled.div`
   width: 100%;
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
   #nav {
     display: flex;
     padding: 12px 32px;
@@ -60,6 +60,7 @@ const DIV = styled.div`
     font-family: Galano Grotesque;
     /* border: 1px solid red; */
     width: 100%;
+    border-bottom: 1px solid #D9D9D9;
 
     div {
       gap: 16px;
@@ -74,7 +75,8 @@ const DIV = styled.div`
     }
   }
   #dashboard {
-    border: 4px solid rosybrown;
+    /* border: 4px solid rosybrown; */
     padding: 32px;
+    background: var(--Black-98, #FAFAFA);
   }
 `;

@@ -15,85 +15,83 @@ import dot1 from "../images/table/dot1.png";
 import dot2 from "../images/table/dot2.png";
 import styled from "styled-components";
 
-const Payouts = () => {
+const Refunds = () => {
   const data = [
     {
+      order_id: "#281209",
+      order_id: "#281208",
+      image: dot2,
+      status: "Successful",
+      id: 131634495747,
+      date: "Today, 08:45 PM",
+      amount: "₹10,125.00",
+    },
+    {
+      order_id: "#281208",
       image: dot1,
       status: "Processing",
       id: 131634495747,
+      date: "Yesterday, 3:00 PM",
       amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
     },
     {
+      order_id: "#281207",
       image: dot2,
       status: "Successful",
       id: 131634495747,
+      date: "12 Jul 2023, 03:00 PM",
       amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
     },
     {
+      order_id: "#281206",
       image: dot2,
       status: "Successful",
       id: 131634495747,
+      date: "12 Jul 2023, 03:00 PM",
       amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
     },
     {
+      order_id: "#281205",
       image: dot2,
       status: "Successful",
       id: 131634495747,
+      date: "12 Jul 2023, 03:00 PM",
       amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
     },
     {
+      order_id: "#281204",
       image: dot2,
       status: "Successful",
       id: 131634495747,
+      date: "12 Jul 2023, 03:00 PM",
       amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
-    },
-    {
-      image: dot2,
-      status: "Successful",
-      id: 131634495747,
-      amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
-    },
-    {
-      image: dot2,
-      status: "Successful",
-      id: 131634495747,
-      amount: "₹10,125.00",
-      fees: "₹1,125.00",
-      total: "₹9,312",
     },
   ];
   return (
     <DIV>
       <Table>
         <Thead>
-          <Th>
-            <Image src={Triangle} />
-          </Th>
+          <th>Order ID</th>
+          <th>Status</th>
           <th>Transaction ID</th>
+          <th>Refund Date</th>
           <th>Order amount</th>
-          <th>Transaction fees</th>
-          <th>Total</th>
         </Thead>
         <Tbody>
           {data.map((el) => (
             <Tr key={el.id}>
               <Td
-                pl={"200px"}
+                color={"#146EB4"}
+                fontFamily={"InGalano Grotesque"}
+                fontWeight={"500"}
+              >
+                {el.order_id}
+              </Td>
+              <Td
                 display={"flex"}
                 alignItems={"center"}
                 color={"#1a181e"}
+                justifyContent={"center"}
               >
                 <Box pr={"5px"}>
                   <Image src={el.image} />
@@ -106,13 +104,10 @@ const Payouts = () => {
                 {el.id}
               </Td>
               <Td color={"#1a181e"} fontFamily={"Galano Grotesque"}>
+                {el.date}
+              </Td>
+              <Td color={"#1a181e"} fontFamily={"Galano Grotesque"}>
                 {el.amount}
-              </Td>
-              <Td color={"#1a181e"} fontFamily={"Galano Grotesque"}>
-                {el.fees}
-              </Td>
-              <Td color={"#1a181e"} fontFamily={"Galano Grotesque"}>
-                {el.total}
               </Td>
             </Tr>
           ))}
@@ -122,21 +117,27 @@ const Payouts = () => {
   );
 };
 
-export default Payouts;
+export default Refunds;
 
 const DIV = styled.div`
   th {
     color: var(--Black-30, #4d4d4d);
     text-align: right;
-    padding: 10px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px; /* 142.857% */
+    padding: 10px;
+  }
+  table {
+    border-radius: var(--Spacing-spacing-04, 8px);
+    background: var(--Black-100, #fff);
+
+    /* Shadow/Card */
+    box-shadow: 0px 2px 6px 0px rgba(26, 24, 30, 0.04);
   }
   thead {
     border-radius: 4px;
     background: var(--Black-95, #f2f2f2);
-    padding: 10px var(--Spacing-spacing-05, 12px);
   }
   th {
     text-align: center;

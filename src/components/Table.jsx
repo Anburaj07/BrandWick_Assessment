@@ -7,22 +7,27 @@ import {
   Input,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Search from "../images/table/Search.png";
 import Sort from "../images/table/Sort.png";
 import download from "../images/table/download.png";
+import Payouts from "./Payouts";
+import Refunds from "./Refunds";
 
 const Table = () => {
+    const[state,setState]=useState("payouts")
   return (
     <DIV>
       <Flex flexDirection={"column"} gap={"20px"} pb={"20px"}>
         <Heading textAlign={"start"}>Transactions | This Month</Heading>
         <Flex>
-          <Button background={"#146eb4"} color={"#FFF"}>
+          <Button  background={state=="payouts"?"#146eb4":"#E6E6E6"}  color={state=="payouts"?"#FFF":"#808080"} value={state} onClick={()=>{
+            setState("payouts")
+          }}>
             Payouts (22)
           </Button>
-          <Button background={"#E6E6E6"} color={"#808080"}>
+          <Button background={state=="refunds"?"#146eb4":"#E6E6E6"}  color={state=="refunds"?"#FFF":"#808080"}  value={state}onClick={()=>setState("refunds")}>
             Refunds (2)
           </Button>
         </Flex>
@@ -58,6 +63,7 @@ const Table = () => {
             </Box>
           </Flex>
         </Flex>
+        {state=="payouts"?<Payouts/>:<Refunds/>}
       </Flex>
     </DIV>
   );
@@ -66,7 +72,7 @@ const Table = () => {
 export default Table;
 
 const DIV = styled.div`
-  border: 1px solid black;
+  /* border: 1px solid black; */
   h2 {
     color: var(--Black-12, #1a181e);
     font-family: Galano Grotesque;
@@ -99,6 +105,9 @@ const DIV = styled.div`
       font-style: normal;
       font-weight: 400;
       line-height: 24px; /* 150% */
+    }
+    button:hover{
+        color: #141515;
     }
   }
 `;
