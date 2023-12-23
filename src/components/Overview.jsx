@@ -101,6 +101,7 @@ export default Overview;
 
 const DIV = styled.div`
   box-sizing: border-box;
+  margin-bottom: 32px;
   /* border: 3px solid pink; */
   #overview {
     width: 100%;

@@ -6,6 +6,7 @@ import Search from "../images/navImages/search.png";
 import Menu from "../images/navImages/Menu.png";
 import Group from "../images/navImages/Group.png";
 import Overview from "../components/Overview";
+import Table from "../components/Table";
 
 const HomePage = () => {
   return (
@@ -40,6 +41,7 @@ const HomePage = () => {
       </Box>
       <Box id="dashboard">
         <Overview />
+        <Table/>
       </Box>
     </DIV>
   );
